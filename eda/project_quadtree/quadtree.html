@@ -1,0 +1,107 @@
+<html>
+  <head>
+
+  </head>
+  <body>
+    <input type="file" name="file" id="file">
+    <input type="file" name="file" id="file2">
+
+    <script src="p5.js" type="text/javascript"></script>
+    <script src="jquery.js"></script>
+    <script>
+    var n =[];
+    var points =[];
+    function setup() {
+
+
+
+      // Sets the screen to be 720 pixels wide and 400 pixels high
+      createCanvas(720, 400);
+      background(0);
+      noSmooth();
+
+      translate(140, 0);
+
+      // Draw gray box
+
+      //line(p3, p3, p2, p3);
+      stroke(255);
+      for(var i =0; i < n.length; i+=4){
+        line(n[i]*10, n[i+1]*10, n[i+2]*10, n[i+3]*10);
+      }
+
+
+      // Draw white points
+      stroke(555);
+      for(var i =0; i < n.length; i+=2){
+        point(points[i]*10, points[i+1]*10);
+      }
+
+
+    }
+
+
+    document.getElementById('file').onchange = function(){
+
+  var file = this.files[0];
+
+  var reader = new FileReader();
+  reader.onload = function(progressEvent){
+    // Entire file
+    console.log(this.result);
+
+    // By lines
+    var lines = this.result.split(' ');
+
+    for(var line = 0; line < lines.length; line++){
+
+
+
+        n.push(parseFloat(lines[line]));
+
+      //line(parseFloat(n[0]), parseFloat(n[1]), parseFloat(n[2]), parseFloat(n[3]));
+
+      //console.log(lines[line]);
+    }
+
+
+    setup();
+  };
+  reader.readAsText(file);
+
+};
+
+document.getElementById('file2').onchange = function(){
+
+var file = this.files[0];
+
+var reader = new FileReader();
+reader.onload = function(progressEvent){
+// Entire file
+console.log(this.result);
+
+// By lines
+var lines = this.result.split(' ');
+
+for(var line = 0; line < lines.length; line++){
+
+
+
+    points.push(parseFloat(lines[line]));
+
+  //line(parseFloat(n[0]), parseFloat(n[1]), parseFloat(n[2]), parseFloat(n[3]));
+
+  //console.log(lines[line]);
+}
+
+
+setup();
+};
+reader.readAsText(file);
+
+};
+
+
+    </script>
+  </body>
+</html>
