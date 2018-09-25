@@ -11,9 +11,7 @@ from login.forms import SignUpForm
 def isEmailValid(email):
     users = User.objects.all()
     temp = users.filter(email=email)
-    return len(users) == 0
-
-
+    return len(temp) == 0
 
 def signUpRequest(request):
     message = ""
@@ -25,9 +23,13 @@ def signUpRequest(request):
             email = form.cleaned_data.get('email')
             if isEmailValid(email):
                 form.save()
-                return redirect('')
+                printUser(username)
+                return redirect('/')
             else:
                 message = "not valid email"
+        else:
+            print("form not valid")
+            message = form.errors
     form = SignUpForm()
     return render(request, 'registration/registro.html',{'form': form, 'message': message})
 

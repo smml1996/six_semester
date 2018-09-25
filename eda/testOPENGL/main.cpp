@@ -131,7 +131,15 @@ int main() {
     glClearBufferfv(GL_COLOR, 0, green);
 
     // Draw our triangles
-    glDrawArrays(GL_TRIANGLES, 0, 3);
+    //glDrawArrays(GL_TRIANGLES, 0, 3);
+
+
+    float line_vertex[]=
+    {
+        0,0, 0,0
+    };
+    glVertexPointer(2, GL_FLOAT, 0, line_vertex);
+    glDrawArrays(GL_LINES, 0, 2);
 
     // Swap the buffers so that what we drew will appear on the screen.
     glfwSwapBuffers(window);

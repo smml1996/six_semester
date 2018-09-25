@@ -94,3 +94,16 @@ void Node::writePoints(){
   myfile.close();
 
 }
+
+void Node::writePoint(const vector<double> &point){
+
+  ofstream myfile("circle.txt", fstream::app);
+  if(myfile.is_open()){
+
+      myfile << point[0] << " " << point[1] << " ";
+
+   }else{
+    cout << "no se pudo abrir archivo" << endl;
+  }
+  myfile.close();
+}

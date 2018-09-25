@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+
+<div class="container" style="margin-top: 10vh;">
+  <div class="row" style="margin-top:3vh;">
+    <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1"><i class="fas fa-money-bill-alt"></i></span>
+    </div>
+    <input id="value" type="text" class="form-control" placeholder="pseudo-value" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+  </div>
+
+
+  <div class="row" style="margin-top:3vh;">
+    <select id="type" class="custom-select">
+      <option value="0" selected>Expense</option>
+      <option value="1">Income</option>
+    </select>
+  </div>
+
+
+  <div class="row" style="margin-top:3vh;">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="fas fa-calendar-alt"></i>
+        </span>
+      </div>
+      <input id="from-date" type="text" name="from" class="form-control" placeholder="from"/>
+    </div>
+  </div>
+
+  <div class="row" style="margin-top:3vh;">
+    <select id="periodSelect" class="custom-select">
+      <option value="0" selected>No period</option>
+      <option value="1">daily</option>
+      <option value="2">biweekly</option>
+      <option value="3">monthly</option>
+    </select>
+  </div>
+
+  <div class="row justify-content-center" style="margin-top:3vh;">
+    <button type="button" class="btn btn-info">Simulate this!</button>
+  </div>
+
+
+
+<div class="row"style="margin-top:10vh;">
+<div class="card" style="width: 40vw;margin-left:auto; margin-right:auto;">
+  <div class="card-body">
+    <h5 class="card-title">Summary</h5>
+
+    <p class="card-text text-center">All year: <span id="all-year"> 0.00</span></p>
+      <p class="card-text text-center">Month: <span id="all-month"> 0.00</span></p>
+  </div>
+</div>
+</div>
+
+</div>
+
+
+<script>
+    $(document).ready(function(){
+      var date_input=$('input[name="from"]'); //our date input has the name "date"
+      var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+      var options={
+        format: 'mm/dd/yyyy',
+        container: container,
+        todayHighlight: true,
+        autoclose: true,
+      };
+      date_input.datepicker(options);
+
+    })
+</script>
+
+
+{% endblock content %}

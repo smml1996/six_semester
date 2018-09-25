@@ -6,16 +6,38 @@ from django.http import HttpResponse,Http404,HttpResponseRedirect
 
 
 def home(request):
-    context = {}
+    number = 1
+    context = {'number':number}
     template = loader.get_template('home.html')
     return HttpResponse(template.render(context, request))
 
 def conf(request):
-    context = {}
+    number= 3
+    context = {'number':number}
     template = loader.get_template('config.html')
     return HttpResponse(template.render(context, request))
 
 def dailyInput(request):
-    context = {}
+    number = 2
+    context = {'number':number}
     template = loader.get_template('dailyInput.html')
+    return HttpResponse(template.render(context, request))
+
+def viewExpenses(request):
+    number=1
+    context = {'number' : number}
+    template = loader.get_template('viewDetail.html')
+    return HttpResponse(template.render(context, request))
+
+def balanceSimulator(request):
+    number = 4
+    context ={ 'number':number}
+    template = loader.get_template('simulator.html')
+    return HttpResponse(template.render(context, request))
+
+
+def savingHistory(request):
+    number =5
+    context = {'number':number}
+    template = loader.get_template('savings.html')
     return HttpResponse(template.render(context, request))

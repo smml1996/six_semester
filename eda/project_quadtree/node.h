@@ -14,4 +14,6 @@ public:
   bool isPointInRange(const vector<double> &point);
   void writeLimits();
   void writePoints();
+
+  void writePoint(const vector<double> &point);
 };

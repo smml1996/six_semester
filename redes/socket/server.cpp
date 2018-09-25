@@ -1,4 +1,7 @@
 /* Server code in C */
+/*
+clang++ -std=c++11 server.cpp -o server
+*/
 
 #include <sys/types.h>
 #include <sys/socket.h>
@@ -10,11 +13,15 @@
 #include <unistd.h>
 #include <iostream>
 #include <thread>
+#include <vector>
+#include <map>
 
 char buffer[10000];
 int n;
 int ConnectFD;
 bool chatActive = true;
+vector< thread > connections;
+map<string, int> users;
 
 std::string getFinalMessage(const std::string &s){
   if(s.size() > 9999){
@@ -38,13 +45,15 @@ void receiveMessage(){
 
     bzero(buffer,10000);
     n = read(ConnectFD, buffer, 4);
-    int l = atoi(buffer);
+    int l = atoi(buffer); // size of message, first 4 bytes
     bzero(buffer,10000);
     read(ConnectFD, buffer, l);
     msg = buffer;
     if(msg == endS.c_str()) chatActive = false;
-    if(n>=0)
-      std::cout << "Client: " << buffer << std::endl;
+    if(n>=0){
+
+    }
+      //std::cout << "Client: " << buffer << std::endl;
   }
 }
 
@@ -89,12 +98,14 @@ int main(void)
 
 
   ConnectFD = accept(SocketFD, NULL, NULL);
-std::thread sendThread(sendMessage);
+  std::thread sendThread(sendMessage);
   std::thread receiveThread(receiveMessage);
+
+
   sendThread.join();
-  std::cout << "sendThread joines" << std::endl;
+  //std::cout << "sendThread joines" << std::endl;
   receiveThread.join();
-  std::cout << "reveiberThread joines" << std::endl;
+  //std::cout << "reveiberThread joines" << std::endl;
 
 
 

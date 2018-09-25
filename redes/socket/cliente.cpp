@@ -1,4 +1,5 @@
 /* Client code in C */
+/*clang++ -std=c++11 cliente.cpp -o cliente */
 
  #include <sys/types.h>
  #include <sys/socket.h>
@@ -18,6 +19,11 @@
  string txt;
  bool chatActive = true;
 
+ string nickname;
+ bool hasNickname = false;
+ int listSize = 0;
+ string to, mensaje;
+
  string getFinalMessage(const string &s){
    if(s.size() > 9999){
      return "0";
@@ -33,9 +39,39 @@
    return answer;
  }
 
+
+
+ string getMensaje(){
+   string ans = "m" + to_string(mensaje.size())+ mensaje + to_string(to.size()) + to;
+   return ans;
+ }
+
  void sendMessage(){
    while(chatActive){
      getline(std::cin, txt);
+
+     if(txt == "login"){
+        cout << "Nickname: ";
+        cin >> nickname;
+        txt = "l"+ to_string(nickname.size()) + nickname;
+        hasNickname = true;
+     }else if(txt == "logout"){
+        nickname = "";
+        hasNickname = false;
+        txt="o";
+     }else if(txt=="list"){
+       txt="l";
+     }else if(txt == "msg"){
+       if(!hasNickname){
+         cout << "login first" << endl;
+       }else{
+         cout << "To: ";
+         cin >> to;
+         cout << "Message: ";
+         getline(std::cin, mensaje);
+         txt = getMensaje();
+       }
+     }
      if(txt == "END") chatActive=false;
      txt = getFinalMessage(txt);
      write(SocketFD,txt.c_str(), txt.length());
@@ -43,15 +79,48 @@
  }
 
  void receiveMessage(){
+
+
    while(chatActive){
-     bzero(buffer,10000);
+
+      bzero(buffer,10000);
       n = read(SocketFD, buffer, 4);
       int l = atoi(buffer);
       bzero(buffer,10000);
       read(SocketFD, buffer, l);
-      if(n>=0)
-        cout << "server: " << buffer << endl;
+      if(n>=0){
+        //cout << "server: " << buffer << endl;
+        char code = buffer[1];
+        if(listSize > 0){
+          cout << buffer << endl;
+          listSize--;
+        }else if(buffer[0] == 'a'){
+          if(code == '1'){
+            cout << "Login is OK" << endl;
+          }else if(code == '2'){
+            cout << "message has been sent to client" << endl;
+          }else if(code == '3'){
+            cout << "logout ok" << endl;
+          }
+        }else if(buffer[0] == 'e'){
+          if(code == '1'){
+            cout << "login - error" << endl;
+          }else if(code == '2'){
+            cout << "msg - error" << endl;
+          }else if(code == '3'){
+            cout << "logout - error" << endl;
+          }
+        }else if(buffer[0] == 'i'){
+          string temp = ""; 
+          temp+=buffer[1];
+          temp+=buffer[2];
+          listSize = std::stoi(temp);
+        }
       }
+
+    }
+
+
  }
 
  int main(void){

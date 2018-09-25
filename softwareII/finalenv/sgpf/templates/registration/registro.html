@@ -3,14 +3,13 @@
 {% block content %}
 
 <div class="main-div">
-
-  <div class="main-div">
     <h1 class="text-center container-fluid" style='margin-top: 10vh;' style="color:#000;"> Sign Up</h1>
     <div class="container">
       <div class="row" style="margin-top:10vh;">
         <form method="post" style="width:100vw;">
+          <h3 class="text-center" style="color:rgb(255,0,0);">{{ message }}</h3>
           {% if form.errors %}
-              <h3 class="text-center" style="color:rgb(255,0,0);">Not valid username and/or password</h3>
+              {{ form.errors }}
           {% endif %}
           {% csrf_token %}
           <div class="col-sm-4 offset-sm-4 text-center">
@@ -23,7 +22,7 @@
                               <i class="fas fa-users"></i>
                             </span>
                           </div>
-
+                          {{ form.username.errors }}
                           <input type="text" name="{{ form.username.html_name }}" class="form-control" placeholder="username"/>
                         </div>
                       </div>
@@ -36,6 +35,8 @@
                               @
                             </span>
                           </div>
+
+
                           <input type="email" name="{{ form.email.html_name }}" class="form-control" placeholder="email"/>
                         </div>
                       </div>
@@ -48,6 +49,7 @@
                               <i class="fas fa-unlock-alt"></i>
                             </span>
                           </div>
+                          {{ form.password1.errors }}
 
                           <input type="password" name="{{ form.password1.html_name }}" class="form-control" placeholder="password"/>
                         </div>
@@ -61,6 +63,9 @@
                             </span>
                           </div>
 
+                          {{ form.password2.errors }}
+
+
                           <input type="password" name="{{ form.password2.html_name }}" class="form-control" placeholder="repeat password"/>
                         </div>
                       </div>
@@ -68,7 +73,7 @@
                     <div class="container">
                       <div class="row justify-content-center">
                         <div class="col-sm-4">
-                          <button class="btn btn-primary" type="submit" role="button">Sign In</button>
+                          <button class="btn btn-primary" type="submit" role="button">Sign Up</button>
                         </div>
                       </div>
                     </div>
@@ -78,7 +83,7 @@
           </form>
       </div>
     </div>
-  </div>
+
 </div>
 
 {% endblock content %}
