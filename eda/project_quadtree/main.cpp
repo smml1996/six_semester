@@ -73,6 +73,7 @@ void loadCrimesFile(){
 int main(){
 
 
+
   promedios.push_back(0.0);
   promedios.push_back(0.0);
 
@@ -92,16 +93,19 @@ int main(){
 
     qt.addPoint(coordinates[i]);
   }
+  vector<double>center;
+  center.push_back(700.0);
+  center.push_back(700.0);
+  qt.getPointsInCircle(50.0,center,qt.head);
 
-  qt.writeTree(qt.head);
-
+  //qt.writeTree(qt.head);
 
 /*
- vector<double> point;
- vector<double>center;
 
-  center.push_back(0.0);
-  center.push_back(0.0);
+ vector<double> point;
+
+
+
   point.push_back(5);
   point.push_back(5);
 
