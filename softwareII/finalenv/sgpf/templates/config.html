@@ -3,14 +3,20 @@
 {% block content %}
 
 <div class="container" style="margin-top:15vh;">
+
   <div class="row"  >
     <form method="POST" class="text-center" style="width:100vw;">
 
+      {% csrf_token %}
 
       <div class="col-md-4" style="margin-left:auto; margin-right:auto;">
         <div class="input-group mb-3 ">
-        <select class="custom-select" id="conceptos">
-          <option value="" selected>New Concept</option>
+          {{ form.isNewConcept.errors }}
+        <select class="custom-select" name="{{ form.isNewConcept.html_name }}" id="conceptos">
+          <option value="-1" selected>New Concept</option>
+          {% for c in conceptos %}
+            <option value="{{ c.id }}">{{ c.name }}</option>
+          {% endfor %}
         </select>
         </div>
       </div>
@@ -18,10 +24,11 @@
 
       <div class="col-md-4" style="margin-left:auto; margin-right:auto;">
         <div class="input-group mb-3">
+          {{ form.name.errors }}
           <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1"><i class="fas fa-pencil-alt"></i></span>
           </div>
-          <input type="text" class="form-control" placeholder="Name" aria-label="Username" aria-describedby="basic-addon1">
+          <input type="text" class="form-control" id="nombre" name="{{ form.name.html_name }}" maxlength="30" placeholder="Name" aria-label="Username" aria-describedby="basic-addon1" required>
         </div>
       </div>
 
@@ -30,57 +37,47 @@
           <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon2"><i class="fas fa-money-bill-alt"></i></span>
           </div>
-          <input type="number" class="form-control" placeholder="Value" aria-label="Username" aria-describedby="basic-addon2">
+          <input type="number" step="0.01" id="valor" class="form-control" name="{{ form.value.html_name }}" placeholder="Value" aria-label="Username" aria-describedby="basic-addon2" required>
         </div>
       </div>
 
       <div class="col-md-4" style="margin-left:auto; margin-right:auto;">
         <div class="input-group mb-3 ">
-        <select class="custom-select" id="period">
-          <option selected>No period</option>
-          <option value="3">daily</option>
-          <option value="1">biweekly</option>
-          <option value="2">monthly</option>
+        <select class="custom-select" name ="{{ form.period.html_name }}" id="period">
+          {% for val, displayVal in form.fields.period.choices %}
+            <option value= "{{ val }}">{{ displayVal }}</option>
+          {% endfor %}
+
         </select>
         </div>
       </div>
 
       <div class="col-md-4" style="margin-left:auto; margin-right:auto;">
         <div class="input-group mb-3 ">
-        <select class="custom-select" id="type">
-          <option value="0" selected>expense</option>
-          <option value="1">Income</option>
+        <select class="custom-select" name="{{ form.isExpense.html_name }}" id="type">
+          <option value="True" selected>expense</option>
+          <option value="False">Income</option>
         </select>
         </div>
       </div>
 
-      <div class="col-md-4" style="margin-left:auto; margin-right:auto;">
-        <div class="input-group mb-3 ">
-        <select class="custom-select" id="expenseType">
-          <option selected>Non-fixed expense</option>
-          <option value="3">health</option>
-          <option value="1">food</option>
-          <option value="2">essential services</option>
-        </select>
-        </div>
-      </div>
 
       <div class="container" style="margin-top:10vh;">
-        <div class="row">
-          <div class="col-sm-5 offset-sm-1 ">
-            <a href="" class="btn btn-primary " role="button"  style="margin-top:1em;">Delete</a>
+        <div class="row justify-content-center text-center">
+          <div class="col-sm-5" >
+            <button type="button" onclick="deleteConcept(event)"  class="btn btn-primary " style="margin-top:1em;">Disable</button>
           </div>
           <div class="col-sm-5 " style="margin-top:1em;">
             <button class="btn btn-primary" type="submit" role="button">Save</button>
           </div>
         </div>
       </div>
-
     </form>
   </div>
 </div>
 
 
+<script>
 
-
+</script>
 {% endblock content %}

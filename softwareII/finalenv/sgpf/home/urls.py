@@ -7,6 +7,9 @@ urlpatterns = [
 	url(r'^viewExpense/$',views.viewExpenses, name="visExpense"),
 	url(r'^balance_simulator/$',views.balanceSimulator, name="simulator"),
 	url(r'^savings_history/$',views.savingHistory, name="savings"),
+	url(r'^delete_concept/$', views.deleteConcept, name='deleteConcept'),
+	url(r'^delete_daily/$', views.deleteDailyInput, name='deleteDailyInput'),
+
 	url(r'^$', views.home, name='home'),
 
 ]

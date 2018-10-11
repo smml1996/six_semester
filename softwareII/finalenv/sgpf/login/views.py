@@ -23,7 +23,7 @@ def signUpRequest(request):
             email = form.cleaned_data.get('email')
             if isEmailValid(email):
                 form.save()
-                return redirect('/')
+                return redirect('login/')
             else:
                 message = "not valid email"
         else:

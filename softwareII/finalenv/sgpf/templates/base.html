@@ -8,13 +8,11 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}" media="screen,projection">
   <link rel="stylesheet" type="text/css" href="{% static 'css/mainStyles.css'%}" media="screen,projection">
   <link rel="stylesheet" type="text/css" href="{% static 'css/all.css'%}">
+	<link rel="stylesheet" href="{% static 'css/bootstrap-datepicker3.css' %}"/>
+
 	<script type="text/javascript" src="{% static 'js/jquery-1.11.3.min.js' %}"></script>
-
-
-
 </head>
 <body style="height:100vh;">
-
 {% if user.is_authenticated %}
   <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Budget Management System</a>
@@ -45,6 +43,14 @@
     </div>
   </nav>
 {% endif %}
+<div style="display:none" id="alert_succ" class="alert alert-success alert-dismissible">
+	<button type="button" class="close" onclick="closeAlertSucceed()">&times;</button>
+	<strong id="alertMessage"></strong>
+</div>
+<div style="display:none" id="alert_wrong" class="alert alert-warning alert-dismissible fade show" role="alert">
+	<button type="button"  class="close" onclick="closeAlertWrong()">&times;</button>
+	<strong id="alertMessageWrong"></strong>
+</div>
 {% block content %}
 
 
@@ -52,11 +58,12 @@
 
 
 <script src="{% static 'js/jquery-3.3.1.slim.min.js' %}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+ <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/bootstrap-datepicker.min.js'%}"></script>
 <script src="{% static 'js/canvasjs.min.js' %}"></script>
-<link rel="stylesheet" href="{% static 'css/bootstrap-datepicker3.css' %}"/>
 
 <script>
 
@@ -73,10 +80,70 @@ $( document ).ready(function() {
 
 		}else{
 			$('#li-5').addClass('active');
-
 		}
 });
 
+function closeAlertWrong(){
+	$("#alert_wrong").hide();
+}
+
+function closeAlertSucceed(){
+	$("#alert_succ").hide();
+}
+function deleteConcept(e){
+		if($("#conceptos").val() == -1){
+			$("#alert_wrong").show();
+			document.getElementById('alertMessageWrong').innerHTML = "Please Select a Concept";
+			return;
+		}
+		$.ajax({
+			type: "GET",
+			url:"{% url 'deleteConcept' %}",
+			dataType: "json",
+			async:true,
+			data:{
+				csrfmiddlewaretoken:'{{ csrf_token }}',
+				id_concept: $("#conceptos").val(),
+			},
+			success: function(){
+
+				$("#alert_succ").show();
+				document.getElementById('alertMessage').innerHTML = "Concept Deleted";
+				console.log("succeed");
+			},
+			error: function(){
+
+				console.log("error");
+
+			}
+		})
+	}
+
+
+	function deleteDailyInput(e){
+		$.ajax({
+			type: "GET",
+			url:"{% url 'deleteDailyInput' %}",
+			dataType: "json",
+			async:true,
+			data:{
+				csrfmiddlewaretoken:'{{ csrf_token }}',
+				id_concept: $("#conceptos").val(),
+				date: $("#from-date").val(),
+			},
+			success: function(){
+
+				$("#alert_succ").show();
+				document.getElementById('alertMessage').innerHTML = "Daily Input Deleted";
+				console.log("succeed");
+			},
+			error: function(){
+
+				console.log("error");
+
+			}
+		})
+	}
 </script>
 
 </body>

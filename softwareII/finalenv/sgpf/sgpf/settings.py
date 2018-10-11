@@ -28,7 +28,7 @@ SECRET_KEY = '$)i#_pdw)h7gtqm-5e1u*fs$&9$qf)8crjkxhyv^je8_%ikotp'
 DEBUG = True
 
 ALLOWED_HOSTS = [u'localhost', u'127.0.0.1',]
-
+DATE_INPUT_FORMATS = ['%d/%m/%Y']
 
 # Application definition
 
