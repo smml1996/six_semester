@@ -27,7 +27,7 @@ SECRET_KEY = '$)i#_pdw)h7gtqm-5e1u*fs$&9$qf)8crjkxhyv^je8_%ikotp'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [u'localhost', u'127.0.0.1',]
+ALLOWED_HOSTS = ['localhost', '127.0.0.1',]
 DATE_INPUT_FORMATS = ['%d/%m/%Y']
 
 # Application definition
@@ -127,5 +127,5 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
 
-LOGIN_REDIRECT_URL = 'home/'
+LOGIN_REDIRECT_URL = '../'
 LOGOUT_REDIRECT_URL = '/'

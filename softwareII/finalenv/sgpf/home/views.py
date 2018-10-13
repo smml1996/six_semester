@@ -45,6 +45,7 @@ def conf(request):
         form = ConfigurationForm(request.POST)
 
         if form.is_valid():
+            print("form is valid")
             if(form.cleaned_data['isNewConcept'] == -1):
                 message = "NEW CONCEPT CREATED"
                 newConcept = Concept(name = form.cleaned_data['name'], value = form.cleaned_data['value'], period = form.cleaned_data['period'], type=form.cleaned_data['isExpense'], id_user= current_id_user)
@@ -57,6 +58,9 @@ def conf(request):
                 concept.period = form.cleaned_data['period']
                 concept.type= form.cleaned_data['isExpense']
                 concept.save()
+        else:
+            print("form invalid")
+            print(form.errors)
     context = {'number':number, 'conceptos': conceptos, 'form': form, 'message':message}
     return HttpResponse(template.render(context, request))
 
