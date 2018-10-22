@@ -16,7 +16,7 @@ def isEmailValid(email):
     temp = users.filter(email=email) # get all users with specific email
     return len(temp) == 0 # si la longitud del <queryset> es 0 entonce el email no esta en uso
 
-def signUp(request):
+def signup(request):
     message = "" # help messages for user
     if request.method == 'POST':
         form = SignUpForm(request.POST) # get form filled by user
@@ -42,9 +42,3 @@ def signUp(request):
             message = form.errors # gather error messages to show to user
     form = SignUpForm()
     return render(request, 'registration/registro.html',{'form': form, 'message': message})
-
-
-def index(request):
-    context = {}
-    template = loader.get_template('login.html')
-    return HttpResponse(template.render(context, request))

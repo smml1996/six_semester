@@ -16,7 +16,7 @@ from django.core.serializers.json import DjangoJSONEncoder
 
 # Create your views here.
 
-def deleteDailyInput(request):
+def DeleteDailyInput(request):
     # this is a get request
     sp = Savings_Percentage.objects.filter(id_user=request.user.id)
     sp[0].value = request.GET['value']
@@ -46,7 +46,7 @@ def home(request):
         # if user not authenticated send her/him to login page
         return redirect('login/')
 
-def conf(request):
+def SaveConcept(request):
     number= 3 # variable sent to interface, used to highlight home tab in navbar
     current_id_user = request.user.id
     #getting the desired saving percentage of current user
@@ -80,7 +80,7 @@ def conf(request):
     context = {'number':number, 'conceptos': conceptos, 'form': form, 'message':message, 'currentPercentage':currentPercentage}
     return HttpResponse(template.render(context, request))
 
-def disableConcepts(request):
+def disableConcept(request):
     # function used for ajax
     current_id_user = request.user.id
     concept = Concept.objects.filter(id_user =current_id_user, id= request.GET['id_concept'])[0]
@@ -91,7 +91,7 @@ def disableConcepts(request):
     data = {} #send empty data as json, meaning end of processing
     return HttpResponse(json.dumps(data), content_type="application/json")
 
-def dailyInput(request):
+def AddDailyInput(request):
     current_id_user = request.user.id
     conceptos = getConcepts(current_id_user) # variable meant to be sent to interface
     number = 2 # variable sent to interface, used to highlight home tab in navbar
