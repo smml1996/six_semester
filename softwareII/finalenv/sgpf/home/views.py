@@ -24,7 +24,7 @@ def DeleteDailyInput(request):
     data ={} # use empty json as response meaning end of processing
     return HttpResponse(json.dumps(data), content_type="application/json")
 
-def changePercentage(request):
+def changeSavingsPercentage(request):
     daily = DailyInput.objects.filter(id= request.GET['id_concept'], date_from__gte =dt.strptime(str(request.GET['date']), "%d/%m/%Y"))
 
 

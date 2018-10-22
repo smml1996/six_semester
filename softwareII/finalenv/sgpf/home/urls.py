@@ -3,7 +3,7 @@ from . import views
 
 urlpatterns = [
 	url(r'^conf/$', views.SaveConcept, name='conf'),
-	url( r'^change_percentage/$',views.changePercentage,name='changePercentage'),
+	url( r'^change_percentage/$',views.changeSavingsPercentage,name='changePercentage'),
 	url(r'^daily_input/$', views.AddDailyInput, name='dailyInput'),
 	url(r'^visualize/$',views.visualize, name="visualize"),
 	url(r'^balance_simulator/$',views.simulateBalance, name="simulator"),
