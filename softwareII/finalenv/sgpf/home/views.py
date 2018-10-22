@@ -9,33 +9,49 @@ import json
 import datetime
 from datetime import datetime as dt
 from django.contrib.auth import views as auth_views
+from login.models import Savings,Savings_Percentage
+from django.core import serializers
+from django.db import connection
+from django.core.serializers.json import DjangoJSONEncoder
 
 # Create your views here.
 
 def deleteDailyInput(request):
-    daily = DailyInput.objects.filter(id= request.GET['id_concept'], date_from__gte =dt.strptime(str(request.GET['date']), "%d/%m/%Y"))
-    if(len(daily) > 0):
-        daily[0].delete();
-    data ={}
+    # this is a get request
+    sp = Savings_Percentage.objects.filter(id_user=request.user.id)
+    sp[0].value = request.GET['value']
+    sp.save()
+    data ={} # use empty json as response meaning end of processing
     return HttpResponse(json.dumps(data), content_type="application/json")
 
+def changePercentage(request):
+    daily = DailyInput.objects.filter(id= request.GET['id_concept'], date_from__gte =dt.strptime(str(request.GET['date']), "%d/%m/%Y"))
+
+
 def getConcepts(id_usuario):
+    # get only concepts which are not disabled by user
     conceptos = Concept.objects.filter(id_user=id_usuario, is_disabled=False)
     return conceptos
 
 def home(request):
-    number = 1
-    context = {'number':number}
+    number = 1 # variable sent to interface, used to highlight home tab in navbar
     template = loader.get_template('home.html')
     if request.user.is_authenticated:
-
+        todayDate = datetime.datetime.today().strftime('%d/%m/%Y')
+        print(request.user.id)
+        currentSaving = Savings.objects.filter(id_user=request.user.id)[0].value
+        context = {'number':number,'currentSaving':currentSaving, 'todayDate': todayDate }
         return HttpResponse(template.render(context, request))
     else:
+        # if user not authenticated send her/him to login page
         return redirect('login/')
 
 def conf(request):
+    number= 3 # variable sent to interface, used to highlight home tab in navbar
     current_id_user = request.user.id
-    number= 3
+    #getting the desired saving percentage of current user
+    currentPercentage = Savings_Percentage.objects.filter(id_user=current_id_user)[0].percentage
+    currentPercentage = currentPercentage*100 # getting the percentage value in %
     form = ConfigurationForm()
     conceptos = getConcepts(current_id_user)
 
@@ -43,7 +59,7 @@ def conf(request):
     message = ""
     if request.method == "POST":
         form = ConfigurationForm(request.POST)
-
+        # (save concept) case
         if form.is_valid():
             print("form is valid")
             if(form.cleaned_data['isNewConcept'] == -1):
@@ -61,33 +77,39 @@ def conf(request):
         else:
             print("form invalid")
             print(form.errors)
-    context = {'number':number, 'conceptos': conceptos, 'form': form, 'message':message}
+    context = {'number':number, 'conceptos': conceptos, 'form': form, 'message':message, 'currentPercentage':currentPercentage}
     return HttpResponse(template.render(context, request))
 
-def deleteConcept(request):
+def disableConcepts(request):
+    # function used for ajax
     current_id_user = request.user.id
     concept = Concept.objects.filter(id_user =current_id_user, id= request.GET['id_concept'])[0]
+            # get concept of requsted user with specific id
+            # delete first one
     concept.is_disabled = True
     concept.save()
-    data = {}
+    data = {} #send empty data as json, meaning end of processing
     return HttpResponse(json.dumps(data), content_type="application/json")
 
 def dailyInput(request):
     current_id_user = request.user.id
-    conceptos = getConcepts(current_id_user)
-    number = 2
-    isDailyInput = False
+    conceptos = getConcepts(current_id_user) # variable meant to be sent to interface
+    number = 2 # variable sent to interface, used to highlight home tab in navbar
+    isDailyInput = False # we dont have any message yet to show to user
     todayDate = datetime.datetime.today().strftime('%d/%m/%Y')
+                #default date to be displayed in this interface, is today's date
     message =""
     print(request.method)
     if request.method == 'POST':
         form  = DailyInputForm(request.POST)
-        isDailyInput = True
+        isDailyInput = True # we have some message to show to user
         if form.is_valid():
             message = "daily input added"
+            # creating new dailyInput:  (Add daily input)
             dailyInput = DailyInput(id_user=current_id_user, id_concept=form.cleaned_data['id_concepto'], value=form.cleaned_data['value'], date_from = form.cleaned_data['from_date'])
             dailyInput.save()
         else:
+            #form is not valid, dont have all data to create new daily input
             message = "couldn't save this daily input"
 
     form = DailyInputForm()
@@ -96,21 +118,30 @@ def dailyInput(request):
                 'isDailyInput': isDailyInput, 'form': form, 'message':message}
     return HttpResponse(template.render(context, request))
 
-def viewExpenses(request):
-    number=1
-    context = {'number' : number}
-    template = loader.get_template('viewDetail.html')
-    return HttpResponse(template.render(context, request))
+def visualize(request):
+    type = request.GET['type']
+    from_date = request.GET['from']
+    to_date = request.GET['to']
+    print(type == '1')
 
-def balanceSimulator(request):
-    number = 4
+    with connection.cursor() as cursor:
+        if type == '1':
+            # user is trying to visualize her/his incomes
+            cursor.execute("SELECT di.value, period, name, date_from FROM home_DailyInput AS di JOIN home_Concept AS c ON c.id=di.id_concept WHERE di.id_user=15 AND ((date_from<= %s AND period!=0) OR (date_from>=%s AND date_from<=%s and period=0))  AND type=true ORDER BY di.date_from DESC",[to_date])
+        else:
+            cursor.execute("SELECT di.value, period, name, date_from FROM home_DailyInput AS di JOIN home_Concept AS c ON c.id=di.id_concept WHERE di.id_user=15 AND ((date_from<= %s AND period!=0) OR (date_from>=%s AND date_from<=%s and period=0)) AND type=false ORDER BY di.date_from DESC",[to_date])
+        json_data = json.dumps(cursor.fetchall(), sort_keys=True, indent=4, separators=(',', ': '), cls=DjangoJSONEncoder)
+        return HttpResponse(json_data, content_type="application/json")
+
+def simulateBalance(request):
+    number = 4 # variable sent to interface, used to highlight home tab in navbar
     context ={ 'number':number}
     template = loader.get_template('simulator.html')
     return HttpResponse(template.render(context, request))
 
 
-def savingHistory(request):
-    number = 5
+def visualizeSavings(request):
+    number = 5 # variable sent to interface, used to highlight home tab in navbar
     context = {'number':number}
     template = loader.get_template('savings.html')
     return HttpResponse(template.render(context, request))

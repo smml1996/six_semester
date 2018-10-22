@@ -1,3 +1,4 @@
+<!-- signup template -->
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block content %}
@@ -14,70 +15,81 @@
           {% csrf_token %}
           <div class="col-sm-4 offset-sm-4 text-center">
               <div class="info-form">
-
-                      <div class="form-group text-center">
-                        <div class="input-group mb-3">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">
-                              <i class="fas fa-users"></i>
-                            </span>
-                          </div>
-                          {{ form.username.errors }}
-                          <input type="text" name="{{ form.username.html_name }}" class="form-control" placeholder="username"/>
-                        </div>
+                  <!-- begin: input username -->
+                  <div class="form-group text-center">
+                    <div class="input-group mb-3">
+                      <!-- begin: inputs' addorn-->
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">
+                          <i class="fas fa-users"></i>
+                        </span>
                       </div>
+                      <!-- end: inputs' addorn-->
+                      {{ form.username.errors }}
+                      <input type="text" name="{{ form.username.html_name }}" class="form-control" placeholder="username"/>
+                    </div>
+                  </div>
+                  <!-- end: input username -->
 
 
-                      <div class="form-group">
-                        <div class="input-group mb-3">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">
-                              @
-                            </span>
-                          </div>
-
-
-                          <input type="email" name="{{ form.email.html_name }}" class="form-control" placeholder="email"/>
-                        </div>
+                  <!-- begin: input email -->
+                  <div class="form-group">
+                    <div class="input-group mb-3">
+                      <!-- begin: inputs' addorn-->
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">
+                          @
+                        </span>
                       </div>
+                      <!-- end: inputs' addorn-->
+                      <input type="email" name="{{ form.email.html_name }}" class="form-control" placeholder="email"/>
+                    </div>
+                  </div>
+                  <!-- end: input email -->
 
 
-                      <div class="form-group">
-                        <div class="input-group mb-3">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">
-                              <i class="fas fa-unlock-alt"></i>
-                            </span>
-                          </div>
-                          {{ form.password1.errors }}
-
-                          <input type="password" name="{{ form.password1.html_name }}" class="form-control" placeholder="password"/>
-                        </div>
+                  <!-- begin: input password(password1) -->
+                  <div class="form-group">
+                    <div class="input-group mb-3">
+                      <!-- begin: inputs' addorn-->
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">
+                          <i class="fas fa-unlock-alt"></i>
+                        </span>
                       </div>
+                      <!-- end: inputs' addorn-->
+                      {{ form.password1.errors }}
 
-                      <div class="form-group">
-                        <div class="input-group mb-3">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">
-                              <i class="fas fa-unlock-alt"></i>
-                            </span>
-                          </div>
+                      <input type="password" name="{{ form.password1.html_name }}" class="form-control" placeholder="password"/>
+                    </div>
+                  </div>
+                  <!-- end: input password(password1) -->
 
-                          {{ form.password2.errors }}
-
-
-                          <input type="password" name="{{ form.password2.html_name }}" class="form-control" placeholder="repeat password"/>
-                        </div>
+                  <!-- begin: input password confirmation (password2) -->
+                  <div class="form-group">
+                    <div class="input-group mb-3">
+                      <!-- begin: inputs' addorn-->
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">
+                          <i class="fas fa-unlock-alt"></i>
+                        </span>
                       </div>
+                      <!-- end: inputs' addorn-->
+                      {{ form.password2.errors }}
+                      <input type="password" name="{{ form.password2.html_name }}" class="form-control" placeholder="repeat password"/>
+                    </div>
+                  </div>
+                  <!-- end: input password confirmation (password2) -->
 
-                    <div class="container">
-                      <div class="row justify-content-center">
-                        <div class="col-sm-4">
-                          <button class="btn btn-primary" type="submit" role="button">Sign Up</button>
-                        </div>
+                  <!-- begin: submit button -->
+                  <div class="container">
+                    <div class="row justify-content-center">
+                      <div class="col-sm-4">
+                        <button class="btn btn-primary" type="submit" role="button">Sign Up</button>
                       </div>
                     </div>
-
+                  </div>
+                  <!-- end: submit button -->
               </div>
             </div>
           </form>

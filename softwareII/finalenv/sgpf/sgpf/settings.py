@@ -30,6 +30,14 @@ DEBUG = True
 ALLOWED_HOSTS = ['localhost', '127.0.0.1',]
 DATE_INPUT_FORMATS = ['%d/%m/%Y']
 
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # During development only
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'michellemuroya96@gmail.com'
+EMAIL_HOST_PASSWORD = 'ponisandpenes'
+EMAIL_PORT = 587
 # Application definition
 
 INSTALLED_APPS = [

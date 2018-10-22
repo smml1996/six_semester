@@ -1,19 +1,32 @@
 <!DOCTYPE html>
+<!--
+	- load all libraries used for frontend and meant to be used in all interfaces
+	- html used for all interfaces
+-->
 {% load staticfiles %}
 <html lang="en">
 <head>
 	<title>Budget Management System</title>
+	<!-- define character codification-->
 	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}" media="screen,projection">
-  <link rel="stylesheet" type="text/css" href="{% static 'css/mainStyles.css'%}" media="screen,projection">
-  <link rel="stylesheet" type="text/css" href="{% static 'css/all.css'%}">
-	<link rel="stylesheet" href="{% static 'css/bootstrap-datepicker3.css' %}"/>
 
+	<!-- used for bootstrap's grid system -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- bootstrap dependecies -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}" media="screen,projection">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/all.css'%}">
+
+	<!-- own css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/mainStyles.css'%}" media="screen,projection">
+
+	<!-- fancy input calendar dependecies -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap-datepicker3.css' %}"/>
 	<script type="text/javascript" src="{% static 'js/jquery-1.11.3.min.js' %}"></script>
+
 </head>
 <body style="height:100vh;">
-{% if user.is_authenticated %}
+{% if user.is_authenticated %} <!-- show navbar only if user is authenticated-->
   <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Budget Management System</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,41 +70,54 @@
 {% endblock %}
 
 
+<!-- bootstrap dependecies -->
 <script src="{% static 'js/jquery-3.3.1.slim.min.js' %}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
  <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+<!-- import library to have a fancy calendar input, just down this comment -->
 <script type="text/javascript" src="{% static 'js/bootstrap-datepicker.min.js'%}"></script>
+
+<!-- chart dependecies (for savings.html)-->
 <script src="{% static 'js/canvasjs.min.js' %}"></script>
 
 <script>
 
 $( document ).ready(function() {
+		// variable "number" sent from backend to highlight navbar tabs
     if({{number}} == 1){
 			$('#li-1').addClass('active');
+			// highlight balance (home) tab
 		}else if({{ number }} ==2){
 			$('#li-2').addClass('active');
-
+			// highlight Daily Input tab
 		}else if({{number}} == 3){
 			$('#li-3').addClass('active');
+			// highlight Configuration tab
 		}else if({{number}} == 4){
 			$('#li-4').addClass('active');
-
+			// highlight Balance Simulator tab
 		}else{
 			$('#li-5').addClass('active');
+			// highlight Savings History tab
 		}
 });
 
 function closeAlertWrong(){
+	// used when user wants to close alert dialogue
 	$("#alert_wrong").hide();
 }
 
 function closeAlertSucceed(){
+	// used when user wants to close alert dialogue
 	$("#alert_succ").hide();
 }
 function deleteConcept(e){
+		// $("#conceptos").val() gives concept id which must be positive
 		if($("#conceptos").val() == -1){
+			// user has not selected new concept
 			$("#alert_wrong").show();
 			document.getElementById('alertMessageWrong').innerHTML = "Please Select a Concept";
 			return;
@@ -100,19 +126,19 @@ function deleteConcept(e){
 			type: "GET",
 			url:"{% url 'deleteConcept' %}",
 			dataType: "json",
-			async:true,
 			data:{
 				csrfmiddlewaretoken:'{{ csrf_token }}',
 				id_concept: $("#conceptos").val(),
 			},
 			success: function(){
 
-				$("#alert_succ").show();
-				document.getElementById('alertMessage').innerHTML = "Concept Deleted";
+				$("#alert_succ").show(); // say to user that concept has been disabled
+				document.getElementById('alertMessage').innerHTML = "Concept Disabled, please refresh page";
 				console.log("succeed");
 			},
 			error: function(){
-
+				$("#alert_wrong").show();
+				document.getElementById('alertMessageWrong').innerHTML = "Something went wrong, please try again";
 				console.log("error");
 
 			}
@@ -125,7 +151,7 @@ function deleteConcept(e){
 			type: "GET",
 			url:"{% url 'deleteDailyInput' %}",
 			dataType: "json",
-			async:true,
+			async:true, // keep front end responsive to user input
 			data:{
 				csrfmiddlewaretoken:'{{ csrf_token }}',
 				id_concept: $("#conceptos").val(),
@@ -133,12 +159,37 @@ function deleteConcept(e){
 			},
 			success: function(){
 
-				$("#alert_succ").show();
+				$("#alert_succ").show(); // say user daily input has been deleted
 				document.getElementById('alertMessage').innerHTML = "Daily Input Deleted";
 				console.log("succeed");
 			},
 			error: function(){
+				$("#alert_wrong").show();
+				document.getElementById('alertMessageWrong').innerHTML = "Something went wrong, please try again";
+				console.log("error");
 
+			}
+		})
+	}
+
+	function deleteDailyInput(e){
+		$.ajax({
+			type: "GET",
+			url:"{% url 'changePercentage' %}",
+			dataType: "json",
+			async:true, // keep front end responsive to user input
+			data:{
+				value: $("#input_percentage").val(),
+			},
+			success: function(){
+
+				$("#alert_succ").show(); // say user daily input has been deleted
+				document.getElementById('alertMessage').innerHTML = "Percentage Changed!";
+				console.log("succeed");
+			},
+			error: function(){
+				$("#alert_wrong").show();
+				document.getElementById('alertMessageWrong').innerHTML = "Something went wrong, please try again";
 				console.log("error");
 
 			}
