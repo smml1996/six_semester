@@ -18,11 +18,10 @@ from django.urls import include, path
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('home.urls')),
-    #path(r'', include('login.urls'), name="login"),
-    path('login/', auth_views.LoginView.as_view(template_name='registration/login.html'), name="login"),
-    path('logout/', include('django.contrib.auth.urls')),
-    path('signup/', include('login.urls')),
-    path('^', include('django.contrib.auth.urls')),
+    path('admin/', admin.site.urls), #admin urls, for django admin page
+    path('', include('home.urls')), #include routes from app home
+    path('login/', auth_views.LoginView.as_view(template_name='registration/login.html'), name="login"), #django implemented Login
+    path('logout/', include('django.contrib.auth.urls')), #django implemented logout
+    path('signup/', include('login.urls')), # include login app urls
+    path('^', include('django.contrib.auth.urls')), # django implemented change_password
 ]
