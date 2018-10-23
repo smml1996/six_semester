@@ -125,11 +125,12 @@ def visualize(request):
     print(type == '1')
 
     with connection.cursor() as cursor:
-        if type == '1':
+        #if type == '1':
             # user is trying to visualize her/his incomes
-            cursor.execute("SELECT di.value, period, name, date_from FROM home_DailyInput AS di JOIN home_Concept AS c ON c.id=di.id_concept WHERE di.id_user=15 AND ((date_from<= %s AND period!=0) OR (date_from>=%s AND date_from<=%s and period=0))  AND type=true ORDER BY di.date_from DESC",[to_date])
-        else:
-            cursor.execute("SELECT di.value, period, name, date_from FROM home_DailyInput AS di JOIN home_Concept AS c ON c.id=di.id_concept WHERE di.id_user=15 AND ((date_from<= %s AND period!=0) OR (date_from>=%s AND date_from<=%s and period=0)) AND type=false ORDER BY di.date_from DESC",[to_date])
+        cursor.execute("SELECT di.value, period, name, date_from FROM home_DailyInput AS di JOIN home_Concept AS c ON c.id=di.id_concept WHERE di.id_user=15 AND ((date_from<= %s AND period!=0) )  AND type=true ORDER BY di.date_from DESC",)
+        #else:
+            #user is trying to visualize her/his expenses
+        #    cursor.execute("SELECT di.value, period, name, date_from FROM home_DailyInput AS di JOIN home_Concept AS c ON c.id=di.id_concept WHERE di.id_user=15 AND ((date_from<= %s AND period!=0) OR (date_from>=%s AND date_from<=%s and period=0)) AND type=false ORDER BY di.date_from DESC",[to_date])
         json_data = json.dumps(cursor.fetchall(), sort_keys=True, indent=4, separators=(',', ': '), cls=DjangoJSONEncoder)
         return HttpResponse(json_data, content_type="application/json")
 
