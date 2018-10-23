@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 from .models import Savings_Percentage, Savings
 
 from login.forms import SignUpForm
+from datetime import datetime
 
 
 # Create your views here.
@@ -31,7 +32,7 @@ def signup(request):
                 sp = Savings_Percentage(id_user = newUserId)
                 sp.save() #create new register for this new user regarding her/his desired saving amount
 
-                saving = Savings(id_user = newUserId)
+                saving = Savings(id_user = newUserId, month=datetime.now().month, year=datetime.now().year)
                 saving.save() # create new register for new user in which we will know how much is she/he saving
 
                 return redirect('../login/')
