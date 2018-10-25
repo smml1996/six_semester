@@ -131,13 +131,11 @@ function deleteConcept(e){
 				id_concept: $("#conceptos").val(),
 			},
 			success: function(){
-
-				$("#alert_succ").show(); // say to user that concept has been disabled
+				// say to user that concept has been disabled
 				document.getElementById('alertMessage').innerHTML = "Concept Disabled, please refresh page";
 				console.log("succeed");
 			},
 			error: function(){
-				$("#alert_wrong").show();
 				document.getElementById('alertMessageWrong').innerHTML = "Something went wrong, please try again";
 				console.log("error");
 
@@ -159,8 +157,7 @@ function deleteConcept(e){
 			},
 			success: function(){
 
-				$("#alert_succ").show(); // say user daily input has been deleted
-				document.getElementById('alertMessage').innerHTML = "Daily Input Deleted";
+				window.location.reload();
 				console.log("succeed");
 			},
 			error: function(){
@@ -172,20 +169,22 @@ function deleteConcept(e){
 		})
 	}
 
-	function deleteDailyInput(e){
+	function changePercentage(e){
 		$.ajax({
 			type: "GET",
 			url:"{% url 'changePercentage' %}",
 			dataType: "json",
-			async:true, // keep front end responsive to user input
+			async:false, // keep front end responsive to user input
 			data:{
 				value: $("#input_percentage").val(),
 			},
 			success: function(){
-
-				$("#alert_succ").show(); // say user daily input has been deleted
+				window.location.reload();
 				document.getElementById('alertMessage').innerHTML = "Percentage Changed!";
-				console.log("succeed");
+				// say to user that concept has been disabled
+
+
+
 			},
 			error: function(){
 				$("#alert_wrong").show();
@@ -195,6 +194,9 @@ function deleteConcept(e){
 			}
 		})
 	}
+
+
+
 </script>
 
 </body>

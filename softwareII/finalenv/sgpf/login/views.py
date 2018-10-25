@@ -5,6 +5,7 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.models import User
 from .models import Savings_Percentage, Savings
 
+
 from login.forms import SignUpForm
 from datetime import datetime
 
@@ -27,12 +28,12 @@ def signup(request):
             email = form.cleaned_data.get('email')
             if isEmailValid(email): #verify this email is not already in use
                 form.save() # save new user
-                newUserId = User.objects.filter(username = username, email = email)[0].id
+                newUser = User.objects.filter(username = username, email = email)[0]
 
-                sp = Savings_Percentage(id_user = newUserId)
+                sp = Savings_Percentage(user = newUser)
                 sp.save() #create new register for this new user regarding her/his desired saving amount
 
-                saving = Savings(id_user = newUserId, month=datetime.now().month, year=datetime.now().year)
+                saving = Savings(user = newUser, month=datetime.now().month, year=datetime.now().year)
                 saving.save() # create new register for new user in which we will know how much is she/he saving
 
                 return redirect('../login/')
@@ -42,4 +43,4 @@ def signup(request):
             print("form not valid")
             message = form.errors # gather error messages to show to user
     form = SignUpForm()
-    return render(request, 'registration/registro.html',{'form': form, 'message': message})
+    return render(request, 'registration/signup.html',{'form': form, 'message': message})
