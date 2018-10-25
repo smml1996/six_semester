@@ -18,6 +18,10 @@ from decimal import Decimal
 
 # Create your views here.
 
+def getNumberOfDays(date):
+    #this functions gives the numbers of days a month has
+    return calendar.monthrange(date.year, date.month)[1]
+
 def checkIfSavingExist(user, year, month):
     #function to see if we need to create a new saving register for this month
     saving = Savings.objects.filter(year=year, month=month, user=user)
@@ -87,8 +91,8 @@ def getCurrentSaving(user, month=dt.now().month, year=dt.now().year , d=dt.now()
     currentSaving+= DailyInput.objects.filter( user=user,date_from__lte = now,concept__type=False, concept__period=3).aggregate(suma=Sum('savings_value'))['suma'] or 0
     #end begin monthly savings
 
-    #begin calculate monthlyaggregate
-    if calendar.monthrange(now.year, now.month)[1] == d:
+    #begin calculate monthly
+    if getNumberOfDays(now) == d:
         currentSaving+= DailyInput.objects.filter( user=user,date_from__lte = now,concept__type=False, concept__period=3).aggregate(suma=Sum('savings_value'))['suma'] or 0
         # if day is last day of month, then sum biweekly incomes too:
         currentSaving+=( DailyInput.objects.filter( user=user,date_from__lte = now,concept__type=False, concept__period=2).aggregate(suma=Sum('savings_value'))['suma'] or 0)*2
@@ -104,28 +108,31 @@ def updatePast(user):
     savingsPast = Savings.objects.filter(user=user, month__lt = now.month, year__lte = now.year, isFinalValue=False)
 
     for saving in savingsPast:
+        #for each saving of each month we want to know if that month has passed and we get to know
+        #how much the user has saved
         saving.value = getCurrentSaving(user, saving.month, saving.year, calendar.monthrange(saving.year, saving.month)[1])
         saving.isFinalValue = True
         saving.save()
 
 def getIncomeOrExpense(isExp, user, useMonth = False):
     now = dt.now()
-    dailiesValue = 0.00
+    dailiesValue = Decimal(0.00)
     # getting all dailies of specific type (expense or income)
     dailes = DailyInput.objects.filter(user=user, date_from__lte=dt.now(),concept__type=isExp)
 
     #getting values for this daily input types with no period
     if not useMonth:
-        dailiesValue = dailes.filter(concept__period=0, date_from__gte= dt(year=dt.now().year, day=1, month=dt.now().month)).aggregate(suma=Sum('value'))['suma'] or 0.00
+        dailiesValue += Decimal(dailes.filter(concept__period=0, date_from__gte= dt(year=dt.now().year, day=1, month=dt.now().month)).aggregate(suma=Sum('value'))['suma'] or 0.00)
     else:
-        dailiesValue = dailes.filter(concept__period=0, date_from__gte= dt(year=dt.now().year, month=1, day=1)).aggregate(suma=Sum('value'))['suma'] or 0.00
+        dailiesValue += Decimal(dailes.filter(concept__period=0, date_from__gte= dt(year=dt.now().year, month=1, day=1)).aggregate(suma=Sum('value'))['suma'] or 0.00)
 
     #getting daily dailyInputs for this type
+    dailiesValue = Decimal(dailiesValue)
     if useMonth:
-        dailiesValue +=( dailes.filter(concept__period=1).aggregate(suma=Sum('value'))['suma'] or 0.00) * dt.now().day
+        dailiesValue +=Decimal(( dailes.filter(concept__period=1).aggregate(suma=Sum('value'))['suma'] or 0.00) * dt.now().day)
     else:
         day_of_year = (dt.now() - dt(dt.now().year, 1, 1)).days + 1
-        dailiesValue +=( dailes.filter(concept__period=1).aggregate(suma=Sum('value'))['suma'] or 0.00) * day_of_year
+        dailiesValue +=Decimal( dailes.filter(concept__period=1).aggregate(suma=Sum('value'))['suma'] or Decimal(0)) * Decimal(day_of_year)
 
     #getting biweeklies
     multiplier = 0.00
@@ -134,7 +141,7 @@ def getIncomeOrExpense(isExp, user, useMonth = False):
         multiplier = dt.now().month *2 # we have the number of months * 2 biweekly incomes
     else:
         multiplier = 2
-    if dt.now().day != calendar.monthrange(now.year, now.month)[1]:
+    if dt.now().day != getNumberOfDays(now):
         #if is not last day of month we have one less biweekly
         multiplier-=1
     if dt.now().day < 14:
@@ -151,7 +158,7 @@ def getIncomeOrExpense(isExp, user, useMonth = False):
     else:
         multiplier = dt.now().month
 
-    if dt.now().day != calendar.monthrange(now.year, now.month)[1]:
+    if dt.now().day != getNumberOfDays(now):
         multiplier-=1
     #multiplier = Decimal(mutiplier)
     dailiesValue += Decimal((dailes.filter(concept__period=3).aggregate(suma=Sum('value'))['suma'] or 0.00) * multiplier)
@@ -285,7 +292,7 @@ def AddDailyInput(request):
                 saving.value+=savings_value
                 saving.save()
 
-            dailyInput.value -= savings_value
+                dailyInput.value -= savings_value
             dailyInput.save()
         else:
             #form is not valid, dont have all data to create new daily input
@@ -306,25 +313,42 @@ def visualize(request):
     dailyBiweekly = ""
     dailyMonthly = ""
     current_user = User.objects.get(id=request.user.id)
+    print(calendar.monthrange(from_date.year, from_date.month)[1])
     if type == '1':
         # we should load Incomes
         dailyUnique= DailyInput.objects.filter(user=current_user, concept__period=0, concept__type = False, date_from__gte = from_date, date_from__lte = to_date).order_by('-date_from')
-        dailyDaily= DailyInput.objects.filter(user=current_user, concept__period=1, concept__type = False, date_from__gte = from_date, date_from__lte = from_date).order_by('-date_from')
-        dailyBiweekly= DailyInput.objects.filter(user=current_user, concept__period=2, concept__type = False, date_from__gte = from_date, date_from__lte = from_date).order_by('-date_from')
-        dailyMonthly= DailyInput.objects.filter(user=current_user, concept__period=3, concept__type = False, date_from__gte = from_date, date_from__lte = from_date).order_by('-date_from')
+        dailyDaily= DailyInput.objects.filter(user=current_user, concept__period=1, concept__type = False, date_from__lte = to_date).order_by('-date_from')
+        if (from_date.day >=14 and to_date.day<=14 ) or (from_date.day <=calendar.monthrange(from_date.year, from_date.month)[1]and to_date.day>=1):
+            # check if there is some 14th of some month in this range
+            dailyBiweekly= DailyInput.objects.filter(user=current_user, concept__period=2, concept__type = False, date_from__lte = to_date).order_by('-date_from')
+        if(from_date.day <=calendar.monthrange(from_date.year, from_date.month)[1] and (to_date.day>=1 and to_date.month>from_date.month)):
+            #check if there is some end of month in this range
+            dailyMonthly= DailyInput.objects.filter(user=current_user, concept__period=3, concept__type = False, date_from__lte = to_date).order_by('-date_from')
     else:
         # we should load expenses
         dailyUnique= DailyInput.objects.filter(user=current_user, concept__period=0, concept__type =True, date_from__gte = from_date, date_from__lte = to_date).order_by('-date_from')
-        dailyDaily= DailyInput.objects.filter(user=current_user, concept__period=1, concept__type =True, date_from__gte = from_date, date_from__lte = from_date).order_by('-date_from')
-        dailyBiweekly= DailyInput.objects.filter(user=current_user, concept__period=2, concept__type =True, date_from__gte = from_date, date_from__lte = from_date).order_by('-date_from')
-        dailyMonthly= DailyInput.objects.filter(user=current_user, concept__period=3, concept__type =True, date_from__gte = from_date, date_from__lte = from_date).order_by('-date_from')
+        dailyDaily= DailyInput.objects.filter(user=current_user, concept__period=1, concept__type =True, date_from__lte = to_date).order_by('-date_from')
+        if (from_date.day >=14 and to_date.day<=14 ) or (from_date.day <=calendar.monthrange(from_date.year, from_date.month)[1] and to_date.day>=1):
+            # check if there is some 14th of some month in this range
+            dailyBiweekly= DailyInput.objects.filter(user=current_user, concept__period=2, concept__type =True, date_from__lte = to_date).order_by('-date_from')
+        if(from_date.day <=calendar.monthrange(from_date.year, from_date.month)[1] and (to_date.day>=1 and to_date.month>from_date.month)):
+            #check if there is some end of month in this range
+            dailyMonthly= DailyInput.objects.filter(user=current_user, concept__period=3, concept__type =True, date_from__lte = to_date).order_by('-date_from')
 
+    #begin serialization of each queryset
     json_dataUnique= serializers.serialize('json', dailyUnique, cls= DjangoJSONEncoder, use_natural_foreign_keys=True,fields=('date_from', 'value', 'concept'))
     json_dataDaily = serializers.serialize('json', dailyDaily, cls= DjangoJSONEncoder,use_natural_foreign_keys=True,fields=('date_from', 'value', 'concept'))
     json_dataBiweekly = serializers.serialize('json', dailyBiweekly, cls= DjangoJSONEncoder,use_natural_foreign_keys=True, fields=('date_from', 'value', 'concept'))
     json_dataMonthly = serializers.serialize('json', dailyMonthly, cls= DjangoJSONEncoder,use_natural_foreign_keys=True,fields=('date_from', 'value', 'concept'))
+    #end serialization of each queryset
 
-    json_data = {'unique':json_dataUnique, 'daily': json_dataDaily,'biweek':json_dataBiweekly, 'monthly':json_dataMonthly}
+    #put all together in a whole json
+    json_data = {'unique':json_dataUnique,
+                'daily': json_dataDaily,
+                'biweek':json_dataBiweekly,
+                'monthly':json_dataMonthly}
+
+    #return json response
     return HttpResponse(json.dumps(json_data), content_type='application/json')
 
 def simulateBalance(request):

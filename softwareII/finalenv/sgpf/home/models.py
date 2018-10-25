@@ -5,7 +5,10 @@ from django.contrib.auth.models import User
 #all models have attribute id, column created by django
 # all models have as default primary key attribute id
 
+
 class ConceptManager(models.Manager):
+    #class needed for serialization
+    #defines a way to handle keys
     def get_by_natural_key(self, name, id):
         return self.get(name=name, id=id);
 
@@ -26,9 +29,12 @@ class Concept(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, default=None) #foreign key, user who created this concept
     is_disabled = models.BooleanField(default=False)
 
+    #define natural key method called when serializing data
     def natural_key(self):
-        return (self.name, self.id)    
+        return (self.name, self.id)
 
+    #we use this meta inner class to get a unique identifier when concept is used as foreign key in a dailyInput
+        #useful for serialization and retrieving the concept id to some interface
     class Meta:
         unique_together = (('name', 'id'))
 

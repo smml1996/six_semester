@@ -61,8 +61,11 @@
   </div>
 </div>
 
+<!-- detail-div is the div shown when visualize expense or visualize income button is clicked -->
 <div id="detail-div" class="container" style="margin-top: 10vh;">
   <h1 id="title-detail"> </h1>
+  <small id="range-date"></small>
+  <button type="button" class="btn btn-outline-primary btn-sm" onclick="goback()" style="float:right">return</button>
   <ul class="nav nav-pills nav-fill" id="pills-tab" role="tablist" style="margin-top:3em;">
     <li class="nav-item">
       <a class="nav-link active" id="pills-no-period-tab" data-toggle="pill" href="#pills-no-period" role="tab" aria-controls="pills-no-period" aria-selected="true">No Period</a>
@@ -199,6 +202,19 @@
 
     }
 
+    function clearVisualizeDiv(listDivName){
+      var listDiv = document.getElementById(listDivName);
+      listDiv.innerHTML = "";
+    }
+
+    function goback(){
+      $('#main-page').show()
+      $('#detail-div').hide();
+      clearVisualizeDiv("list-no-period");
+      clearVisualizeDiv("list-daily");
+      clearVisualizeDiv("list-biweekly");
+      clearVisualizeDiv("list-monthly");
+    }
     function loadIncomes(event){
       $.ajax({
         type: "GET",
@@ -214,6 +230,7 @@
            $('#main-page').hide()
            $('#detail-div').show();
            document.getElementById('title-detail').innerHTML = "Incomes"
+           document.getElementById("range-date").innerHTML = $("#from-date").val() + " - " + $("#to-date").val();
 
            no_period = data['unique'];
            daily = data['daily'];
@@ -247,6 +264,7 @@
         success: function(data){
           $('#main-page').hide()
           $('#detail-div').show();
+          document.getElementById("range-date").innerHTML = $("#from-date").val() + " - " + $("#to-date").val();
           document.getElementById('title-detail').innerHTML = "Expenses"
           no_period = data['unique'];
           daily = data['daily'];
