@@ -288,7 +288,7 @@ def AddDailyInput(request):
                 dailyMonth = dailyInput.date_from.month
                 dailyYear = dailyInput.date_from.month
 
-                saving = Savings.objects.filter(user= current_user, month=dailymonth, year=dailyYear)[0]
+                saving = Savings.objects.filter(user= current_user, month=dailyMonth, year=dailyYear)[0]
                 saving.value+=savings_value
                 saving.save()
 
