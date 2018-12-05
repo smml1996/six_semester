@@ -19,6 +19,9 @@ class ConfigurationForm(forms.Form):
         (False, 'Income'),
     ))
 
+class ChangePercentageForm(forms.Form):
+    value = forms.DecimalField(decimal_places=2)
+
 class DailyInputForm(forms.Form):
     # form inputs for dailyInput.html
     id_concepto = forms.IntegerField()

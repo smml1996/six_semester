@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/stefaniemuroyalei/Documents/cicloVI/hybridTree/Node.cpp
+Node.h
+/Users/stefaniemuroyalei/Documents/cicloVI/hybridTree/Node.h
+stdlib.h
+-
+time.h
+-
+algorithm
+-
+
+/Users/stefaniemuroyalei/Documents/cicloVI/hybridTree/Node.h
+vector
+-
+

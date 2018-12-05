@@ -12,16 +12,68 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e982edd7-6da8-41af-90c6-f4672fc3f90d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Snake.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Snake.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../eda/project_quadtree/circle.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../eda/project_quadtree/circle.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../eda/project_quadtree/main" beforeDir="false" afterPath="$PROJECT_DIR$/../eda/project_quadtree/main" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../eda/project_quadtree/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../eda/project_quadtree/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../eda/project_quadtree/quadtree.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../eda/project_quadtree/quadtree.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RTree/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RTree/Node.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RTree/Node.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RTree/RTree.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RTree/RTree.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hybridTree/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hybridTree/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hybridTree/HybridTree.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hybridTree/HybridTree.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hybridTree/Node.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hybridTree/Node.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/coding_exercise/add_rever_num.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/coding_exercise/dna_sorting.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/coding_exercise/herdSums.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/coding_exercise/vertical_histogram.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/countingSort.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/countingsort" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/img_contour/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/img_contour/example.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/img_contour/face.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/img_contour/face.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/img_contour/image.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/img_contour/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/img_contour/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/mathematics/factorial.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/waterlevel.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../eda/project_quadtree/quadtree.html" beforeDir="false" afterPath="$PROJECT_DIR$/../eda/project_quadtree/quadtree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../redes/socket/cliente" beforeDir="false" afterPath="$PROJECT_DIR$/../redes/socket/cliente" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../redes/socket/server" beforeDir="false" afterPath="$PROJECT_DIR$/../redes/socket/server" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../topicos_ia/regreMulti.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../topicos_ia/regreMulti.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/chapter2lab/f.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/chapter2lab/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/chapter2lab/p.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/chapter2lab/ponis.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/server2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../redes/socket/server2.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/Client.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/Client.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/Snake.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/Snake.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/client" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/cliente" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/clienteclear" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/server" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/snakeClient.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/snakeServer.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/test.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/test2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/test3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/home/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/home/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/login/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/login/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/static/metadata/icons.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/config.html" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/config.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/dailyInput.html" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/dailyInput.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../topicos_ia/FastForward.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../topicos_ia/FastForward.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/untitled.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/untitled.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/untitled" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/cmake-build-debug/untitled" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,9 +87,10 @@
     <session id="303406170">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -72,7 +125,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
@@ -96,23 +149,17 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cmake-build-debug/Makefile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-623" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-987" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-368" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -124,7 +171,7 @@
         <entry file="file://$PROJECT_DIR$/Snake.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="e#108#127#0" expanded="true" />
               </folding>
@@ -163,7 +210,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -186,6 +232,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -232,11 +279,12 @@
       <option name="presentableId" value="Default" />
       <updated>1538276960324</updated>
       <workItem from="1538276962055" duration="1166000" />
+      <workItem from="1543333394303" duration="9000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1166000" />
+    <option name="totallyTimeSpent" value="1175000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -251,15 +299,9 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" weight="0.32891566" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32891566" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="CMake" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32891566" />
@@ -267,10 +309,16 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32891566" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32891566" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="CMake" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,8 +328,12 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Snake.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
@@ -294,31 +346,21 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-623" />
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-987" />
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-368" />
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Snake.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Snake.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="e#108#127#0" expanded="true" />
           </folding>

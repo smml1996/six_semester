@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+<div class="row" style="margin-top:25vh;">
+   <form  method="POST" class="col s12">
+     {% if form.errors %}
+         <h3 class="center-align" style="color:rgb(255,0,0);">Not valid username and/or password</h3>
+     {% endif %}
+     {% csrf_token %}
+     <div class="row">
+       <div  class="input-field col s4 push-s4">
+         <input name="{{ form.username.html_name }}" placeholder="Username" placeholder="Placeholder" id="first_name" type="text" class="validate">
+
+       </div>
+     </div>
+     <div class="row">
+       <div class="input-field col s4 push-s4">
+         <input  name="{{ form.password.html_name }}" id="last_name" type="password" class="validate" placeholder="password">
+       </div>
+    </div>
+    <div class="row">
+      <div class="col s4 push-s4">
+        <a href="{% url 'signup' %}" class="btn waves-effect waves-light" role="button" >Sign Up</a>
+      </div>
+      <div class="col s4 push-s3">
+        <button class="btn waves-effect waves-light" type="submit" name="action">login
+        </button>
+      </div>
+    </div>
+   </form>
+ </div>
+{% endblock content %}

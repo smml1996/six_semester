@@ -61,23 +61,23 @@
 
       //line(p3, p3, p2, p3);
 
-        strokeWeight(0.1);
+        strokeWeight(1);
         stroke(255);
-        for(var i =0; i < n.length; i+=4){
+        for(var i =0; i < n.length -1; i+=4){
           line(n[i], n[i+1], n[i+2], n[i+3]);
         }
 
 
 
       // Draw white points
-      strokeWeight(1);
+      strokeWeight(3);
 
         stroke(255,0,0);
         for(var i =0; i < points.length; i+=2){
           point(points[i], points[i+1]);
         }
 
-        strokeWeight(0.1);
+        strokeWeight(3);
 
         stroke(150, 246, 191);
         for(var i =0; i < pointsCircle.length; i+=2){

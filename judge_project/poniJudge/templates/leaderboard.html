@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="row">
+  <h2 style="margin-left:1em;">Leaderboard</h2>
+</div>
+
+<div class="row" style="padding-left:8em; padding-right:8em;">
+
+  <table class="striped">
+     <thead>
+       <tr>
+           <th>Username</th>
+           <th>Problem 1</th>
+           <th>Problem 2</th>
+           <th>Problem 3</th>
+           <th>Score</th>
+       </tr>
+     </thead>
+     <tbody>
+       {% for s in scores %}
+         <tr>
+           <td>{{ s.user__username }}</td>
+           <td>{{ s.problem1_status }}</td>
+           <td>{{ s.problem2_status }}</td>
+           <td>{{ s.problem3_status }}</td>
+           <td>{{ s.score }}</td>
+         </tr>
+       {% endfor %}
+
+     </tbody>
+   </table>
+</div>
+{% endblock content %}

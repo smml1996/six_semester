@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/edaRTree.dir/main.cpp.o CMakeFiles/edaRTree.dir/RTree.cpp.o CMakeFiles/edaRTree.dir/Node.cpp.o CMakeFiles/edaRTree.dir/util.cpp.o  -o edaRTree 

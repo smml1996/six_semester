@@ -40,9 +40,16 @@
         <li class="nav-item" id="li-2">
           <a class="nav-link" href="{% url 'dailyInput' %}">Daily Input</a>
         </li>
-        <li class="nav-item" id="li-3">
-          <a class="nav-link" href="{% url 'conf' %}">Configuration</a>
-        </li>
+
+				<li class="nav-item dropdown ">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Configuration
+					</a>
+					<div class="dropdown-menu navbar-dark bg-dark" aria-labelledby="navbarDropdown">
+						<a class="nav-link" href="{% url 'conf' %}">Concept</a>
+						<a class="nav-link" href="{% url 'changePercentage' %}">Percentage</a>
+					</div>
+				</li>
         <li class="nav-item" id="li-4">
           <a class="nav-link" href="{% url 'simulator' %}">Balance Simulator</a>
         </li>

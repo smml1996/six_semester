@@ -12,34 +12,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60314681-5d20-4060-ad0b-dcf9ce59a691" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../RTree/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RTree/Node.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RTree/Node.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RTree/RTree.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RTree/RTree.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/coding_exercise/add_rever_num.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/coding_exercise/dna_sorting.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/coding_exercise/herdSums.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/coding_exercise/vertical_histogram.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/countingSort.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/countingsort" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/img_contour/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/img_contour/example.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/img_contour/face.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/img_contour/face.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/img_contour/image.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/img_contour/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/img_contour/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/mathematics/factorial.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/waterlevel.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eda/project_quadtree/quadtree.html" beforeDir="false" afterPath="$PROJECT_DIR$/../eda/project_quadtree/quadtree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/chapter2lab/f.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/chapter2lab/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/chapter2lab/p.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/chapter2lab/ponis.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/server2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../redes/socket/server2.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/Client.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/Client.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/Snake.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/Snake.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/client" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/cliente" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/clienteclear" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/server" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/snakeClient.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/snakeServer.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/test.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/test2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/test3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/home/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/home/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/home/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/home/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/home/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/home/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/home/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/home/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/login/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/login/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/login/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/login/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/login/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/login/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/login/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/login/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/login/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/login/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/sgpf/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/sgpf/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/sgpf/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/sgpf/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/static/css/mainStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/static/css/mainStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/static/metadata/icons.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/config.html" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/config.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/dailyInput.html" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/dailyInput.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/registration/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/registration/password_reset_complete.html" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/registration/password_reset_complete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/registration/password_reset_confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/registration/password_reset_confirm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/registration/password_reset_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/registration/password_reset_done.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/registration/password_reset_email.html" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/registration/password_reset_email.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/registration/password_reset_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/registration/password_reset_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/registration/registro.html" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/registration/registro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/savings.html" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/savings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/simulator.html" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/simulator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../topicos_ia/FastForward.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../topicos_ia/FastForward.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/main.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,20 +80,24 @@
     <session id="146329912">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="129" />
+          <entry key="cpp" value="10172" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="129" />
+          <entry key="ObjectiveC" value="10172" />
         </counts>
       </usages-collector>
     </session>
@@ -81,8 +112,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="239">
+              <caret line="46" column="21" lean-forward="true" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -118,8 +149,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
       <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="untitled" type="b2602c69:ProjectViewProjectNode" />
+              <item name="untitled" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -167,16 +208,22 @@
       <updated>1540226047376</updated>
       <workItem from="1540226048738" duration="444000" />
       <workItem from="1540237119305" duration="568000" />
+      <workItem from="1540510885159" duration="4351000" />
+      <workItem from="1540684061157" duration="4153000" />
+      <workItem from="1540840765818" duration="613000" />
+      <workItem from="1541218552008" duration="4000" />
+      <workItem from="1542296969479" duration="13452000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1012000" />
+    <option name="totallyTimeSpent" value="23585000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27110156" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -210,8 +257,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="239">
+          <caret line="46" column="21" lean-forward="true" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

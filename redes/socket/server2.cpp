@@ -24,7 +24,7 @@ std::map< std::string, int > clientes;
 
 std::string txt;
 
-std::string normalizeNumber(int number){
+std::string normalize(int number){
   std::string answer = std::to_string(number);
   answer = number < 10 ? "0" + answer : answer;
   return answer;

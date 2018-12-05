@@ -33,8 +33,8 @@ def signup(request):
                 sp = Savings_Percentage(user = newUser)
                 sp.save() #create new register for this new user regarding her/his desired saving amount
 
-                saving = Savings(user = newUser, month=datetime.now().month, year=datetime.now().year)
-                saving.save() # create new register for new user in which we will know how much is she/he saving
+                #saving = Savings(user = newUser, month=datetime.now().month, year=datetime.now().year)
+                #saving.save() # create new register for new user in which we will know how much is she/he saving
 
                 return redirect('../login/')
             else:

@@ -1,0 +1,10 @@
+hromium.org
+http://blog.chromium.org/2016/08/from-chrome-apps-to-web.html
+http://code.google.com/chrome/extensions/trunk/manifest.html#content_security_policy
+http://code.google.com/p/chromium/issues/entry?template=ChromeFrame Issue
+http://googleonlinesecurity.blogspot.com/2012/02/celebrating-one-year-of-web.html
+http://www.chromium.org/Home/chromium-security/core-principles
+http://www.microsoft.com/security/default.aspx
+https://blog.chromium.org/2009/04/
+https://blog.chromium.org/2009/06/
+https://blog.chromium.org/2009/11/

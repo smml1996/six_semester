@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/stefaniemuroyalei/Documents/cicloVI/edaRTree/Node.h
+vector
+-
+util.cpp
+/Users/stefaniemuroyalei/Documents/cicloVI/edaRTree/util.cpp
+
+/Users/stefaniemuroyalei/Documents/cicloVI/edaRTree/RTree.cpp
+RTree.h
+/Users/stefaniemuroyalei/Documents/cicloVI/edaRTree/RTree.h
+queue
+-
+vector
+-
+iostream
+-
+cmath
+-
+
+/Users/stefaniemuroyalei/Documents/cicloVI/edaRTree/RTree.h
+Node.h
+/Users/stefaniemuroyalei/Documents/cicloVI/edaRTree/Node.h
+
+/Users/stefaniemuroyalei/Documents/cicloVI/edaRTree/main.cpp
+iostream
+-
+fstream
+-
+RTree.h
+/Users/stefaniemuroyalei/Documents/cicloVI/edaRTree/RTree.h
+
+/Users/stefaniemuroyalei/Documents/cicloVI/edaRTree/util.cpp
+iostream
+-
+cmath
+-
+

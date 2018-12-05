@@ -43,7 +43,7 @@
             <span class="input-group-text" id="basic-addon2"><i class="fas fa-money-bill-alt"></i></span>
           </div>
           <!-- end: input's addorn -->
-          <input type="number" id="inputValue" step="0.01" name = "{{ form.value.html_name }}" class="form-control" placeholder="Value" aria-label="Username" aria-describedby="basic-addon2">
+          <input type="number" id="inputValue" min="0.00" step="0.01" name = "{{ form.value.html_name }}" class="form-control" placeholder="Value" aria-label="Username" aria-describedby="basic-addon2">
         </div>
       </div>
       <!-- end: input concept's value -->
@@ -53,13 +53,13 @@
       <div class="container" style="margin-top:10vh;">
         <div class="row">
           <!-- begin: button delete -->
-          <div class="col-sm-5 offset-sm-1 ">
-            <button type="button" onclick="deleteDailyInput(event)" class="btn btn-primary" style="margin-top:1em;">Delete</button>
+          <div class="col-sm-5">
+            <button type="button" onclick="deleteDailyInput(event)" class="btn btn-primary" style="margin-top:1em; float:right; width:5em;">Delete</button>
           </div>
           <!-- end: button delete -->
           <!-- begin: button add -->
           <div class="col-sm-5 " style="margin-top:1em;">
-            <button class="btn btn-primary" type="submit" role="button">Add</button>
+            <button class="btn btn-primary" type="submit" style="width:5em;" role="button">Add</button>
           </div>
           <!-- end: button add -->
         </div>

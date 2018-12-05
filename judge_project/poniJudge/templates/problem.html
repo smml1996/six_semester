@@ -1,0 +1,214 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+<div class="row">
+  <h3 class="center-align"> <strong> {{ title }} </strong> </h3>
+</div>
+<div class="row">
+  <p class="center-align"> time limit per test: {{time_limit}} <br>
+  memory limit per test: {{memory_limit}}<br>
+  input: standard input<br>
+  output: standard output
+  </p>
+</div>
+
+<div class="row" style="padding-left:10em; padding-right:10em;">
+
+  {% if value == '1'%}
+    <p>
+      Theatre Square in the capital city of Berland has a rectangular shape
+      with the size n × m meters. On the occasion of the city's anniversary,
+      a decision was taken to pave the Square with square granite flagstones.
+      Each flagstone is of the size a × a.
+    </p>
+    <p>
+      What is the least number of flagstones needed to pave the Square?
+      It's allowed to cover the surface larger than the Theatre Square,
+      but the Square has to be covered. It's not allowed to break the
+      flagstones. The sides of flagstones should be parallel to the sides
+      of the Square.
+    </p>
+
+    <p>
+      <strong>Input</strong><br>
+      The input contains three positive integer numbers in the first line:
+      <strong><i>n, m and a</i></strong> (1 &#8804; <strong><i>n, m, a</i></strong> &#8804; 10 <sup>9</sup>).
+    </p>
+
+    <p>
+      <strong>Output</strong><br>
+      Write the needed number of flagstones.
+    </p>
+
+    <p>
+      <strong>Examples</strong><br>
+      <table>
+        <thead>
+          <tr>
+              <th>Input</th>
+              <th>Output</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>6 6 4</td>
+            <td>4</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </p>
+  {% elif value == '2' %}
+    <p>
+      Pony has a multiset <i>s</i> consisting of <i>n</i> integer numbers.Pony
+      calls some number <i>x</i> nice if it appears in the multiset exactly once.
+      For example, multiset {1,1,2,3,3,3,4} contains nice numbers 2 and 4.
+    </p>
+    <p>
+      Vasya wants to split multiset <i>s</i> into two multisets <i>a</i>
+      and <i>b</i> (one of which may be empty) in such a way that the quantity
+      of nice numbers in multiset <i>a</i> would be the same as the quantity
+      of nice numbers in multiset <i>b</i> (the quantity of numbers to appear
+      exactly once in multiset <i>a</i> and the quantity of numbers to appear
+      exactly once in multiset <i>b</i>).
+    </p>
+
+    <p>
+      <strong>Input</strong><br>
+      The first line contains a single integer <strong><i>n</i></strong> (2 &#8804; <strong><i>n</i></strong> &#8804; 100)
+      The second line contains <strong><i>n</i></strong> integers
+      <i>s<sub>1</sub>,s<sub>2</sub>,... s<sub>n</sub> </i>
+      (1 &#8804; <i>s<sub>i</sub></i> &#8804; 100)
+    </p>
+
+    <p>
+      <strong>Output</strong><br>
+      If there exists no split of <i>s</i> to satisfy the given requirements,
+      then print "NO" in the first line.<br><br>
+      Otherwise print "YES" in the first line.<br><br>
+      The second line should contain a string, consisting of <i>n</i>
+      characters. <i>i</i>-th character should be equal to 'A' if the <i>i</i>
+      -th element of multiset <i>s</i> goes to multiset <i>a</i> and 'B' if
+      the <i>i</i>-th element of multiset <i>s</i> goes to multiset <i>b</i>.
+      Elements are numbered from 1 to <i>n</i> in the order they are given
+      in the input.<br><br>
+      If there exist multiple solutions, then print any of them.
+    </p>
+
+    <p>
+      <strong>Examples</strong><br>
+      <table>
+        <thead>
+          <tr>
+              <th>Input</th>
+              <th>Output</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>4<br>
+              3 5 7 1
+            </td>
+            <td>YES <br> BABA</td>
+          </tr>
+          <tr>
+            <td>3<br>
+              3 5 1
+            </td>
+            <td>NO</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </p>
+  {% else %}
+    <p>
+      Let's call an undirected graph 𝐺=(𝑉,𝐸)relatively prime if and only if
+      for each edge(v,u)∈ E GCD(v,u)=1 (the greatest common divisor of <i>v</i>
+      and <i>u</i> is 1). If there is no edge between some pair of vertices <i>v</i>
+      and <i>u</i> then the value of GCD(v,u) doesn't matter. The vertices
+      are numbered from 1 to |V|.
+    </p>
+    <p>
+      Construct a relatively prime graph with n vertices and m edges such that
+      it is connected and it contains neither self-loops nor multiple edges.
+    </p>
+    <p>
+      If there exists no valid graph with the given number of vertices and edges then output "Impossible".
+    </p>
+    <p>
+      If there are multiple answers then print any of them.
+    </p>
+
+    <p>
+      <strong>Input</strong><br>
+      The only line contains two integers
+      <strong><i>n and m</i></strong> (1 &#8804; <strong><i>n, m</i></strong> &#8804; 10 <sup>5</sup>).
+      - the number of vertices and the number of edges.
+    </p>
+
+    <p>
+      <strong>Output</strong><br>
+      If there exists no valid graph with the given number of vertices and edges then output "Impossible".<br><br>
+      Otherwise print the answer in the following format:<br><br>
+      The first line should contain the word "Possible".<br><br>
+      The <i>i</i>-th of the next <i>m</i> lines should contain the <i>i</i>
+      -th edge <i> (v<sub>i</sub>, u<sub>i</sub>)</i> of the resulting graph (
+      1 &#8804; <i> v<sub>i</sub>, u<sub>i</sub></i> &#8804; n, v<sub>i</sub> &ne; u<sub>i</sub>.
+      For each pair (v,u) there can be no more pairs (v,u) or (u,v). The vertices are numbered from 1 to n.
+      <br><br>
+      If there are multiple answers then print any of them.
+    </p>
+
+    <p>
+      <strong>Examples</strong><br>
+      <table>
+        <thead>
+          <tr>
+              <th>Input</th>
+              <th>Output</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>5 6</td>
+            <td>Possible <br>2 5
+              <br>3 2
+              <br>5 1
+              <br>3 4
+              <br>4 1<br>
+              5 4
+            </td>
+          </tr>
+          <tr>
+            <td>6 12</td>
+            <td>Impossible</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </p>
+  {% endif %}
+</div>
+
+<div class= "row">
+
+  <form  enctype="multipart/form-data" method="POST">
+    {% csrf_token %}
+    <div class="row">
+      <div class="col s3 push-s3">
+            {{ form }}
+      </div>
+        <div class="col s3 push-s4" style="margin-top:2em;">
+          <button class="btn waves-effect waves-light center-align" type="submit" name="action">Submit Solution
+          </button>
+        </div>
+    </div>
+
+  </form>
+</div>
+{% endblock content %}

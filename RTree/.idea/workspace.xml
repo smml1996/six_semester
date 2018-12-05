@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="RTree" targetName="RTree" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="48495de3-420a-40cf-8381-63e1d5d3cec7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Node.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Node.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RTree.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RTree.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/coding_exercise/add_rever_num.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/coding_exercise/dna_sorting.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/coding_exercise/herdSums.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/coding_exercise/vertical_histogram.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/countingSort.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/countingsort" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/img_contour/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/img_contour/example.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/img_contour/face.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/img_contour/face.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/img_contour/image.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/img_contour/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/img_contour/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/mathematics/factorial.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../competitiva/waterlevel.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eda/project_quadtree/quadtree.html" beforeDir="false" afterPath="$PROJECT_DIR$/../eda/project_quadtree/quadtree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/chapter2lab/f.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/chapter2lab/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/chapter2lab/p.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/chapter2lab/ponis.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/server2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../redes/socket/server2.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/Client.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/Client.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/Snake.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/Snake.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/client" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/cliente" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/clienteclear" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/server" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/snakeClient.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/snakeServer.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/test.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/test2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redes/socket/snake_game/test3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/home/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/home/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/login/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/login/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/static/metadata/icons.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/config.html" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/config.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/dailyInput.html" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/dailyInput.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../softwareII/finalenv/sgpf/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../topicos_ia/FastForward.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../topicos_ia/FastForward.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/untitled.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/cmake-build-debug/CMakeFiles/untitled.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/cmake-build-debug/untitled" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/cmake-build-debug/untitled" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/main.cpp" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FUSProjectUsageTrigger">
+    <session id="1900442885">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="cpp" value="4" />
+          <entry key="h" value="2" />
+          <entry key="html" value="1" />
+          <entry key="js" value="2" />
+          <entry key="txt" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="1" />
+          <entry key="JavaScript" value="2" />
+          <entry key="ObjectiveC" value="6" />
+          <entry key="PLAIN_TEXT" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="cpp" value="2360" />
+          <entry key="h" value="109" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="ObjectiveC" value="2469" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RTree.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-end-line="7" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" selection-start-line="9" selection-end-line="72" selection-end-column="1" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/RTree.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Node.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1170">
+              <caret line="78" selection-start-line="78" selection-end-line="88" selection-end-column="5" />
+              <folding>
+                <element signature="e#53#70#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Node.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" selection-start-line="8" selection-end-line="12" selection-end-column="21" />
+              <folding>
+                <element signature="e#97#114#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>choo</find>
+      <find>choose</find>
+      <find>splitN</find>
+      <find>insert</find>
+      <find>adjustTree</find>
+      <find>splitNode</find>
+      <find>split</find>
+      <find>writePoint</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/util.cpp" />
+        <option value="$PROJECT_DIR$/latitudes.txt" />
+        <option value="$PROJECT_DIR$/longitudes.txt" />
+        <option value="$PROJECT_DIR$/p5.js" />
+        <option value="$PROJECT_DIR$/visualize.html" />
+        <option value="$PROJECT_DIR$/jquery.js" />
+        <option value="$PROJECT_DIR$/RTree.h" />
+        <option value="$PROJECT_DIR$/Node.h" />
+        <option value="$PROJECT_DIR$/Node.cpp" />
+        <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/RTree.cpp" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="877" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="RTree" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RTree" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RTree" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RTree" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cmake-build-debug" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.RTree">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RTree" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RTree" TARGET_NAME="RTree" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="RTree" RUN_TARGET_NAME="RTree">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Build All" />
+      <item itemvalue="Application.RTree" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="48495de3-420a-40cf-8381-63e1d5d3cec7" name="Default Changelist" comment="" />
+      <created>1541218570844</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1541218570844</updated>
+      <workItem from="1541218573120" duration="13803000" />
+      <workItem from="1542296945958" duration="21000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="13824000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3299363" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.3299363" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="CMake" order="12" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.24964234" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="CMake" order="0" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="4" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="5" weight="0.3299363" />
+      <window_info anchor="bottom" id="Message" order="6" />
+      <window_info anchor="bottom" id="Find" order="7" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.3299363" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="12" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="right" id="Commander" order="1" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/util.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/latitudes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="50001" lean-forward="true" selection-start-line="50001" selection-end-line="50001" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53947">
+          <caret line="77794" column="51" lean-forward="true" selection-start-line="77794" selection-start-column="51" selection-end-line="77794" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jquery.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visualize.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3285">
+          <caret line="219" column="6" selection-start-line="219" selection-start-column="6" selection-end-line="219" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/longitudes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="50000" column="18" selection-start-line="50000" selection-start-column="18" selection-end-line="50000" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/points.txt" />
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/limits.txt" />
+    <entry file="file://$PROJECT_DIR$/RTree.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="72" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="78" selection-start-line="78" selection-end-line="88" selection-end-column="5" />
+          <folding>
+            <element signature="e#53#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="12" selection-end-column="21" />
+          <folding>
+            <element signature="e#97#114#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RTree.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

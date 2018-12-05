@@ -1,0 +1,40 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> Pony Judge </title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <body>
+
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo" style="margin-left:1em;">Pony Judge</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="{% url 'problem' 1 %}">Problem 1</a></li>
+          <li><a href="{% url 'problem' 2 %}">Problem 2 </a></li>
+          <li><a href="{% url 'problem' 3 %}">Problem 3</a></li>
+          <li><a href="{% url 'leaderboard' %}">Leaderboard</a></li>
+        {% if user.is_authenticated %}
+          <li><a href="#">Hi, {{ user.username }}!</a></li>
+          <li><a href="{% url 'logout' %}">logout</a></li>
+        {% else %}
+          <li><a href="{% url 'login' %}">login</a></li>
+        {% endif %}
+        </ul>
+
+      </div>
+    </nav>
+    {% block content %}
+
+    {% endblock %}
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="{% static 'js/materialize.min.js' %}"></script>
+  </body>
+</html>
